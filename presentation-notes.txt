@@ -1,0 +1,36 @@
+What is a message bus?
+- Publisher and subscribers
+
+Message Bus vs Queue
+- Fifo https://stackoverflow.com/questions/7793927/message-queue-vs-message-bus-what-are-the-differences
+- more or less interchangeable
+
+Examples
+- Florence
+
+Advantages
+- Decoupling - separation of concerns, smaller code bases
+- stream splitting
+- retry of message processing - allows consumer to fail
+Disadvantage (in general)
+- async (not always idead)
+
+MB providers
+- RabbitMQ, Mosquitto, Apache Kafka, ZeroMQ, Apache ActiveMQ, Google Cloud PubSub, Azure Scheduler, KubeMQ (k8s native)
+- ibm, microsoft, google, aws, apache, redhat, etc. Everybody's made one
+
+Terminology
+- MQTT - messaging/pub-sub protocol, good for IOT due to low payload size
+- MQ (IBM) (protocol)
+- AMQP
+
+Additional/not covered
+- priority queues
+- level of service - delivery guarantees
+- dead letter queues (SQS)
+- telemetry - statistics on the queues
+
+RabbitMQ specific - topic vs channel
+- rmq is a message broker, supports various protocols
+- exchange - publisher sends msg to exchange
+  exchange decides what to do from there
